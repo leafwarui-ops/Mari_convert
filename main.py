@@ -1,7 +1,20 @@
-from conversor import file_convert
-from conversor import * 
+from tkinter import *
+from conversor import *
 
-main = file_convert()
+#chamando a classe app dando o nome da janela
+main = App("Mari converter")
+#chamando a classe file_convert e instanciando-a
+files = file_convert()
 
-main.ler_imagem()
-main.save_jpg()
+#array que define os botões de conversão
+dados_ler = [
+    {"titulo":"webp","function": lambda: files.ler_imagem(".webp")}, #botão webp
+    {"titulo":"jpg","function": lambda: files.ler_imagem(".jpg")} #botão jpg
+    ]
+
+
+#cria os botões na tela
+App.buttons(main, dados_ler)
+
+#iniciando o programa
+main.iniciar()
