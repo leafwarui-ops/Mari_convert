@@ -9,7 +9,9 @@ files = file_convert()
 #array que define os botões de conversão
 dados_ler = [
     {"titulo":"webp","function": lambda: files.ler_imagem(".webp")}, #botão webp
-    {"titulo":"jpg","function": lambda: files.ler_imagem(".jpg")} #botão jpg
+    {"titulo":"jpg","function": lambda: files.ler_imagem(".jpg")}, #botão jpg
+    {"titulo":"png","function": lambda: files.ler_imagem(".png")}, #botão png
+    {"titulo":"bmp","function": lambda: files.ler_imagem(".bmp")}, #botão btm
     ]
 
 
